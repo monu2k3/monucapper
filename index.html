@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capper Computer Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Capper Computer Institute</h1>
+        <p>Basic Computer, Advanced Excel, Tally ERP9, Graphic Design, MARG Course, Video Editing</p>
+        <p><strong>Address:</strong> H.NO. 327, Chaudhary Complex First Floor, Main Road, Shalimar Bagh Village, Delhi-110088</p>
+        <p><strong>Contact:</strong> 8860049271, 7678143275</p>
+    </header>
+
+    <!-- Registration Form -->
+    <div class="container">
+        <div class="form-header">
+            <h2>Student Registration Form</h2>
+        </div>
+
+        <!-- Add animation for form appearance -->
+        <form class="student-form" id="studentForm" action="https://formspree.io/f/mnqzjdrl" method="POST">
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" name="studentName" placeholder="Enter Student's Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="studentEmail">Email</label>
+                <input type="email" id="studentEmail" name="studentEmail" placeholder="Enter Student's Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="studentPhone">Phone Number</label>
+                <input type="tel" id="studentPhone" name="studentPhone" placeholder="Enter Student's Phone Number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="studentCourse">Course</label>
+                <select id="studentCourse" name="studentCourse" required>
+                    <option value="Basic Computer">Basic Computer</option>
+                    <option value="Advanced Excel">Advanced Excel</option>
+                    <option value="Tally ERP9">Tally ERP9</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="MARG Course">MARG Course</option>
+                    <option value="Video Editing">Video Editing</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="courseDuration">Course Duration</label>
+                <input type="text" id="courseDuration" name="courseDuration" placeholder="Enter Course Duration (e.g., 2 Months)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="courseFee">Course Fee</label>
+                <input type="number" id="courseFee" name="courseFee" placeholder="Enter Course Fee" required>
+            </div>
+
+            <div class="form-group">
+                <label for="studentAddress">Address</label>
+                <input type="text" id="studentAddress" name="studentAddress" placeholder="Enter Student's Address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="studentFee">Fee Status</label>
+                <select id="studentFee" name="studentFee" required>
+                    <option value="Paid">Paid</option>
+                    <option value="Unpaid">Unpaid</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="studentPhoto">Upload Photo</label>
+                <input type="file" id="studentPhoto" name="studentPhoto">
+            </div>
+
+            <button type="submit" class="submit-btn">Register Student</button>
+        </form>
+    </div>
+
+    <!-- Registered Students -->
+    <div class="container student-list">
+        <h2>Registered Students</h2>
+        <div id="studentList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
